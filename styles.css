@@ -3,25 +3,27 @@ body {
     background-size: cover;
     background-color: #8585bad5;
     background-image: url('files/tisch.webp');
+    background-attachment: fixed; /* Fixiert das Hintergrundbild */
+    background-position: center; /* Zentriert das Hintergrundbild */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     margin: 0;
+    position: relative; /* Stellt sicher, dass das absolute Positionieren im Container funktioniert */
 }
 
 .logo-container {
     position: absolute;
-    top: 0;
+    top: 0px; /* Abstand vom oberen Rand des Bildschirms */
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
-    background-color: rgba(255, 255, 255, 0); /* Optional: Hintergrundfarbe des Headers */
 }
 
 .logo-container img {
     max-height: 25vh; /* Passen Sie die Größe des Logos an */
     height: auto;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.5)); /* Schattierung des Logos */
 }
